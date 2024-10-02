@@ -58,7 +58,7 @@ public class TugasModul {
 
     pilihMenu();
     
-    TugasModul4 objek = new TugasModul4();
+    TugasModul objek = new TugasModul();
 
     objek.bayar();
     Scanner input = new Scanner(System.in);

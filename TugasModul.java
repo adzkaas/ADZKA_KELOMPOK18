@@ -19,6 +19,8 @@ public class TugasModul {
     static void pilihMenu() {
         String[] pilihan = {"paket 1: ayam bakar","paket 2: ayam goreng", "paket 3: ayam bali",
                 "paket 4: ayam bakar + es teh manis","paket 5: ayam goreng + teh hangat"};
+        System.out.println(Arrays.toString(pilihan));
+    }
     public void bayar() {
         Scanner input = new Scanner(System.in);
         System.out.println("masukan jumlah pesanan (masukan angka): ");
@@ -47,3 +49,22 @@ public class TugasModul {
         return "terima kasih " + nama + " karena sudah memesan, pesanan anda akan segera diproses dalam "
                 + waktu + " menit";
     }
+        public static void main(String[] args) {
+    salam("Halo");
+
+    System.out.println(returnText());
+
+    System.out.println(returnParam("silahkan pilih menu di bawah ini"));
+
+    pilihMenu();
+    
+    TugasModul4 objek = new TugasModul4();
+
+    objek.bayar();
+    Scanner input = new Scanner(System.in);
+    System.out.print("masukan nama anda: ");
+    String nama = input.nextLine();
+    String printMe = objek.intro(nama, 5);
+    System.out.println(printMe);
+        }
+}
